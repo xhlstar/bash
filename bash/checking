@@ -1,0 +1,10 @@
+#!/bin/bash
+read name 
+cat /etc/passwd |grep $name
+#echo $?
+if [ $? = 0 ]
+then
+	echo "Found $name is log in"
+else
+	echo "This is no user space"
+fi

@@ -1,0 +1,19 @@
+#!/bin/bash
+# This is my first shell test 2016.08.28
+echo "Hello hailiang . let's go test"
+date=$(date)
+echo $date
+name=$(uname -n)
+echo $name 
+linux=$(uname -a)
+echo $linux
+echo $(ls ../)
+#echo $(ps -aux |grep root)
+echo $TERM
+echo $PATH
+echo $HOME
+du
+id |awk '{print $2}'
+echo "Please couldn't you loan me \$50.00"
+echo "Goodbye" 
+date |awk '{print $5}'

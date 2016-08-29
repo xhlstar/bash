@@ -1,0 +1,24 @@
+#!/bin/bash
+# This is a select test script 
+# author:xuhl
+# date  :20160828
+
+
+count=0
+while true
+do
+	select item in "rice noodle " "vageltable fruit" "sdfsdf sdfsdfs";
+	do
+	case $item in 
+		
+	"rice noodle")
+		echo "you have choose rice"
+		;;
+		
+	"sdfsdf sdfsdfs")
+		echo "sdsdfsdfsdfsfsdfsdsdf"
+		;;
+	esac
+	done	
+
+done	

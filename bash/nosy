@@ -1,0 +1,15 @@
+#!/bin/bash
+#set -x
+echo "What is your name ?"
+read first middle last
+#echo $first $middle $last
+echo "$first  nice to meet you."
+echo "What is your birthday?"
+read birthday
+#declare -i age
+age=`echo $birthday |awk '{print $1}'`
+echo $age
+now=`date |awk '{print $1}'|sed 's/年//'`
+echo $now
+let age=$now-$age
+echo $age

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if (( $# <= 2 ))
+then
+	echo "Usage reame oldfile newfile "
+	echo "argv two less"
+fi
+mv $1 $2

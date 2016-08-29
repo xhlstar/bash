@@ -1,0 +1,4 @@
+1i\\ #This is the first line
+/500$/d
+s/\([A-Z][a-z]*\) \([A-Z][a-z]*\):/\2 \1:/
+$a\\ THE END

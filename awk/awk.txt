@@ -1,0 +1,4 @@
+BEGIN{printf "what is your name?";\
+getline name <"dev/tty"\
+$1 ~ name  {print "FOUND" name "on line ",NR "."}\
+END{print "see ya," name "."}

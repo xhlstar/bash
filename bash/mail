@@ -1,0 +1,28 @@
+#!/bin/bash
+mailpath="/home/xuhl/.thunderbird/cf01db96.default/Mail/shmail.montage-tech.com"
+mailcount=0
+oldmailcount=0
+echo $mailcount
+function getmailcount
+{
+	mailcount=`ls -s $mailpath |grep 总|awk '{print $2}'`
+	echo $mailcount
+}
+count=0
+while true
+do
+	let count+=1
+	sleep 1
+	if (($count % 10 == 0))
+	then
+		oldmailcount=$mailcount	
+		getmailcount
+		if (( oldmailcount != mailcount && oldmailcount != 0 ))
+		then
+			echo "You got a new mail .Please check it ^_^.."
+		fi
+	fi	
+done
+
+
+

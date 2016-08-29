@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ $1 != mtime -o $2 != 尺寸 ]
+then
+	echo "error" >"/dev/tty"
+fi
